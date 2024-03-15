@@ -1,4 +1,4 @@
-package rocks.zipcode;
+package test.java.rocks.zipcode;
 
 import org.junit.Test;
 
@@ -12,7 +12,8 @@ public class AppTest {
      * Rigorous Test.
      */
     @Test
-    public void testApp() {
+    public void testApp()
+    {
         assertTrue(true);
     }
 }
