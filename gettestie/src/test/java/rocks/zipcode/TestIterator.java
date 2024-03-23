@@ -32,4 +32,42 @@ public class TestIterator
 //    }
 //}
 //    System.out.println(numbers);
+@Test
+public void testAdd() {
+
+    ArrayList<Integer> al = new ArrayList<Integer>();
+    int expected = 5;
+
+    for (int i = 0; i < 10; i++)
+        al.add(i);
+
+    Iterator<Integer> itr = al.iterator();
+
+    int i = 0;
+    while (itr.hasNext()) {
+        //  Moving cursor to next element
+        i = itr.next();
+
+        // Removing odd elements
+        if (i % 2 != 0)
+            itr.remove();
+    }
+
+    Assert.assertEquals(expected, al.size());
+}
+
+    @Test
+    public void testNext()
+    {
+        ArrayList<String> names = new ArrayList<String>();
+
+        names.add("Allison");
+        names.add("Margaret");
+        names.add("James");
+        names.add("Michael");
+
+        Iterator<String> iterator = names.iterator();
+
+        Assert.assertEquals("Allison", iterator.next());
+    }
 }
