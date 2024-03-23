@@ -1,5 +1,6 @@
 package test.java.rocks.zipcode;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Vector;
@@ -34,5 +35,32 @@ public class TestVector
         // Creating an empty Vector
 
         // Use add() method to add elements in the Vector
+    }
+    @Test
+    public void testAdd()
+    {
+        Vector<String> vector = new Vector<String>();
+        Integer expected = 3;
+
+        vector.add("SampleString1");
+        vector.add("SampleString2");
+        vector.add("SampleString3");
+
+        Integer actual = vector.size();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @org.junit.Test
+    public void testClone() {
+        Vector<String> vector = new Vector<String>();
+
+        vector.add("Hello world 1");
+        vector.add("Hello world 2");
+        vector.add("Hello world 3");
+
+        Object copy_vector = vector.clone();
+
+        Assert.assertEquals(vector, copy_vector);
     }
 }
