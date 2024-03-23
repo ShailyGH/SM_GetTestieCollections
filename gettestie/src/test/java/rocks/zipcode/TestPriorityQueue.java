@@ -44,5 +44,29 @@ public class TestPriorityQueue
         queue.remove(str);
         Assert.assertFalse(queue.isEmpty()); // false
     }
+    @Test
+    public void testPeek()
+    {
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
 
+        pq.add(100);
+        pq.add(50);
+        pq.add(75);
+
+        int actual = pq.peek();
+        Assert.assertEquals(50, actual);
+    }
+
+    @Test
+    public void testPoll()
+    {
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+
+        pq.add(100);
+        pq.add(50);
+        pq.add(75);
+
+        int actual = pq.poll();
+        Assert.assertEquals(50, actual);
+    }
 }
